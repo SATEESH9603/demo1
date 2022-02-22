@@ -28,6 +28,10 @@ pipeline{
 								echo 'running the unit test...'
 							}
 					}
+					stage('Integration test'){
+						steps {
+							echo 'Running the integration test..'
+						}
 			}
 }
 }
