@@ -15,10 +15,10 @@ pipeline{
 				when{
 					not{
 						branch "master"
+					}
 				}
-			}
-			steps{
-				echo 'hello'
+				steps{
+					echo 'hello'
 				}
 			}
 			stage('Four'){
@@ -27,6 +27,20 @@ pipeline{
 							steps{
 								echo 'running the unit test...'
 							}
+					}
+				stage('Integration test'){
+						agent{
+							docker{
+								reuseNode false
+								image 'ubuntu'
+							}
+						}
+						steps {
+							echo 'Running the integration test..'
+						}
+
 				}
 			}
-			
+}
+}
+}
