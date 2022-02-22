@@ -28,6 +28,7 @@ pipeline{
 								echo 'running the unit test...'
 							}
 				}
+			}
 			stage('Integration test'){
 						agent{
 							docker{
@@ -38,5 +39,4 @@ pipeline{
 						steps {
 							echo 'Running the integration test..'
 						}
-				}
-			}	
+			}
