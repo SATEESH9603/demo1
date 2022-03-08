@@ -6,12 +6,5 @@ ipeline{
 					echo 'hi, this is satish'
 				}
 			}
-			stage('Two'){
-				steps{
-					input( 'Do you want to proceed?')
-				}
-			}
-}
-}
-}
+		}
 }
