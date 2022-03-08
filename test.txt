@@ -3,7 +3,7 @@ ipeline{
 		stages{
 			stage('One'){
 				steps{
-					echo 'hi, this is satish'
+					echo 'hello, this is satish'
 				}
 			}
 		}
